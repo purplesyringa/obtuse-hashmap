@@ -32,8 +32,8 @@ namespace obtuse_hashtable {
 // just a single '1' bit in the appropriate location.
 //
 // The key detail is that we pay for unused hashes with just one bit of memory.
-// This is unlikely chaining-based hashtables, which store a machine word per
-// hash, and unlikely open addressing-based hashtables, which store a whole data
+// This is unlike chaining-based hashtables, which store a machine word per
+// hash, and unlike open addressing-based hashtables, which store a whole data
 // entry per hash. This allows us to decrease the load factor significantly
 // without increasing memory consumption, which in turn decreases the number of
 // *hash* collisions (while increasing *bucket* collision rate).
